@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-rose: #fdf8f7;
+  --color-brand-primary: #9b5d73;
+  --color-brand-primary-light: #c592a3;
+  --color-brand-primary-dark: #774355;
+  --color-brand-text: #333333;
+  --color-brand-gray: #f4f4f4;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-text bg-white;
+  }
+}
+
+/* Hide Legacy Elementor Headers and Footers */
+#masthead, 
+footer[itemtype="https://schema.org/WPFooter"], 
+#colophon {
+  display: none !important;
+}
