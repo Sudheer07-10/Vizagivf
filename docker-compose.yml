@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  vizag-ivf-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vizag-ivf-app
+    ports:
+      # Mapping external port 5555 to internal Nginx port 80
+      - "5555:80"
+    restart: always
