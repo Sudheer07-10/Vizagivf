@@ -19,7 +19,7 @@ const AboutSection = () => {
             </div>
             
             {/* Floating Quote */}
-            <div className="absolute -left-6 -top-6 bg-white/95 backdrop-blur shadow-lg p-6 rounded-2xl border border-brand-rose max-w-[200px] transform -rotate-3">
+            <div className="hidden md:block absolute -left-6 -top-6 bg-white/95 backdrop-blur shadow-lg p-6 rounded-2xl border border-brand-rose max-w-[200px] transform -rotate-3">
               <p className="text-brand-primary font-serif italic text-lg text-center">
                 "You are stronger than you think"
               </p>

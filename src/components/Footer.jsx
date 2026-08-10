@@ -50,7 +50,7 @@ const Footer = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold mb-4 uppercase tracking-wider text-sm text-brand-primary-light">Quick Links</h4>
                 <ul className="space-y-3">
