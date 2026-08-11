@@ -4,17 +4,18 @@ import ServicesSection from '../components/ServicesSection';
 import AboutSection from '../components/AboutSection';
 import DoctorsSection from '../components/DoctorsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
-import LocationsSection from '../components/LocationsSection';
+import SEO from '../components/SEO';
+
 
 const Home = () => {
   return (
     <>
+      <SEO title="Best IVF Clinic" />
       <HeroSection />
       <ServicesSection />
       <AboutSection />
       <DoctorsSection />
       <TestimonialsSection />
-      <LocationsSection />
     </>
   );
 };

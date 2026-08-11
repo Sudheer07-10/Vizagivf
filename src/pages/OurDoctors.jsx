@@ -1,49 +1,24 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import { coreDoctors, getCurrentLocation } from '../data/locationData';
+import SEO from '../components/SEO';
 
-const doctors = [
-  {
-    id: 1,
-    name: "Dr. B. Sireesha Rani",
-    role: "Infertility Specialist, Obstetrician & Gynaecologist",
-    credentials: "DNB (Ob & Gyn), Diploma in Reproductive Medicine (Germany)",
-    experience: "Leading Specialist",
-    image: "/wp-content/uploads/2023/08/Dr-B-Sireesha-Rani.png"
-  },
-  {
-    id: 2,
-    name: "Dr. Ramesh Baipalli",
-    role: "Surgical Gastroenterologist",
-    credentials: "M.S. (Gen. Surg), PDCC",
-    experience: "Senior Consultant",
-    image: "/wp-content/uploads/2023/08/Dr-Ramesh-Baipalli.png"
-  },
-  {
-    id: 3,
-    name: "Dr. Pavani Sathineedi",
-    role: "Obstetrician & Gynaecologist",
-    credentials: "MS OBG, FMAS, FRM",
-    experience: "Consultant",
-    image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png"
-  },
-  {
-    id: 4,
-    name: "Dr. Sravya Naramchetti",
-    role: "Obstetrician & Gynaecologist",
-    credentials: "MBBS, MS OBGY",
-    experience: "Consultant",
-    image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png"
-  }
-];
 
 const OurDoctors = () => {
+  const location = useLocation();
+  const currentLocation = getCurrentLocation(location.pathname);
+  const displayDoctors = [...coreDoctors, ...(currentLocation.doctors || [])];
+
   return (
-    <PageLayout 
+    <>
+      <SEO title="Our Specialists" description="Meet our expert doctors at Vizag IVF Centre." />
+      <PageLayout 
       title="Our Specialists" 
       subtitle="Meet our dedicated team of experienced fertility specialists and surgeons who are committed to helping you build your family."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {doctors.map((doctor) => (
+        {displayDoctors.map((doctor) => (
           <div key={doctor.id} className="bg-brand-rose rounded-[30px] p-8 text-center shadow-sm border border-brand-primary-light/10">
             <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md mb-6 relative">
               <img 
@@ -62,6 +37,7 @@ const OurDoctors = () => {
         ))}
       </div>
     </PageLayout>
+    </>
   );
 };
 

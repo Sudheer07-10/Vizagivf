@@ -1,9 +1,12 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import SEO from '../components/SEO';
 
 const AboutUs = () => {
   return (
-    <PageLayout 
+    <>
+      <SEO title="About Us" description="Learn more about Vizag IVF Centre and our expert doctors." />
+      <PageLayout 
       title="About Us" 
       subtitle="Vizag IVF Centre is a state-of-art speciality infertility clinic located in Visakhapatnam and has branches in Vizianagaram and Gajuwaka."
     >
@@ -40,6 +43,7 @@ const AboutUs = () => {
         </div>
       </div>
     </PageLayout>
+    </>
   );
 };
 

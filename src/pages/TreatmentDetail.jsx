@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation, Navigate } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import treatmentsData from '../data/treatments.json';
+import SEO from '../components/SEO';
+
 
 const TreatmentDetail = () => {
   const location = useLocation();
@@ -17,6 +19,11 @@ const TreatmentDetail = () => {
   }
 
   return (
+    <>
+    <SEO 
+      title={treatment.title} 
+      description={`Learn more about ${treatment.title} and how our expert specialists can assist you.`} 
+    />
     <PageLayout 
       title={treatment.title} 
       subtitle={`Learn more about ${treatment.title} and how our expert specialists can assist you.`}
@@ -68,6 +75,7 @@ const TreatmentDetail = () => {
         </div>
       </div>
     </PageLayout>
+    </>
   );
 };
 

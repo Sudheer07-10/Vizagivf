@@ -1,9 +1,19 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import { getCurrentLocation } from '../data/locationData';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import LocationsSection from '../components/LocationsSection';
+import SEO from '../components/SEO';
+
 
 const ContactUs = () => {
+  const location = useLocation();
+  const currentLocation = getCurrentLocation(location.pathname);
+
   return (
+    <>
+    <SEO title="Contact Us" description="Get in touch with Vizag IVF Centre. Please call or email us for an appointment." />
     <PageLayout 
       title="Contact Us" 
       subtitle="Please call or email us and we will be happy to assist you. Getting an accurate diagnosis can be one of the most impactful experiences that you can have."
@@ -39,11 +49,9 @@ const ContactUs = () => {
               <MapPin size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-serif text-brand-text mb-2">Main Branch (Visakhapatnam)</h3>
+              <h3 className="text-xl font-serif text-brand-text mb-2">{currentLocation.name}</h3>
               <p className="text-brand-text/70 leading-relaxed">
-                # 11-4-8/11/2, Flat No: 2, <br/>
-                KGH Down Road, Maharanipeta, <br/>
-                Visakhapatnam - 530002
+                {currentLocation.address}
               </p>
             </div>
           </div>
@@ -55,7 +63,7 @@ const ContactUs = () => {
             <div>
               <h3 className="text-xl font-serif text-brand-text mb-2">Phone</h3>
               <p className="text-brand-text/70 leading-relaxed">
-                +91 9494351234
+                {currentLocation.phones ? currentLocation.phones.join(', ') : currentLocation.phone}
               </p>
             </div>
           </div>
@@ -67,7 +75,7 @@ const ContactUs = () => {
             <div>
               <h3 className="text-xl font-serif text-brand-text mb-2">Email</h3>
               <p className="text-brand-text/70 leading-relaxed">
-                vizagivfcentre@gmail.com
+                {currentLocation.email}
               </p>
             </div>
           </div>
@@ -88,6 +96,8 @@ const ContactUs = () => {
 
       </div>
     </PageLayout>
+    <LocationsSection />
+    </>
   );
 };
 

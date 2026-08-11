@@ -1,43 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
-const doctors = [
-  {
-    id: 1,
-    name: "Dr. B. Sireesha Rani",
-    role: "Infertility Specialist, Obstetrician & Gynaecologist",
-    credentials: "DNB (Ob & Gyn), Diploma in Reproductive Medicine (Germany)",
-    experience: "Leading Specialist",
-    image: "/wp-content/uploads/2023/08/Dr-B-Sireesha-Rani.png"
-  },
-  {
-    id: 2,
-    name: "Dr. Ramesh Baipalli",
-    role: "Surgical Gastroenterologist",
-    credentials: "M.S. (Gen. Surg), PDCC",
-    experience: "Senior Consultant",
-    image: "/wp-content/uploads/2023/08/Dr-Ramesh-Baipalli.png"
-  },
-  {
-    id: 3,
-    name: "Dr. Pavani Sathineedi",
-    role: "Obstetrician & Gynaecologist",
-    credentials: "MS OBG, FMAS, FRM",
-    experience: "Consultant",
-    image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png"
-  },
-  {
-    id: 4,
-    name: "Dr. Sravya Naramchetti",
-    role: "Obstetrician & Gynaecologist",
-    credentials: "MBBS, MS OBGY",
-    experience: "Consultant",
-    image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png"
-  }
-];
+import { coreDoctors, getCurrentLocation } from '../data/locationData';
 
 const DoctorsSection = () => {
+  const location = useLocation();
+  const currentLocation = getCurrentLocation(location.pathname);
+  const displayDoctors = [...coreDoctors, ...(currentLocation.doctors || [])];
+
   return (
     <section className="py-20 bg-brand-rose">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +22,7 @@ const DoctorsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {doctors.map((doctor) => (
+          {displayDoctors.map((doctor) => (
             <div key={doctor.id} className="bg-white rounded-3xl p-6 shadow-sm border border-brand-primary-light/10">
               <div className="flex gap-4">
                 <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border-2 border-brand-rose">

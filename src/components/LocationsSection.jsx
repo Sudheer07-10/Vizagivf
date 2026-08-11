@@ -30,35 +30,46 @@ const locations = [
 
 const LocationsSection = () => {
   return (
-    <section className="py-20 bg-[#f8f9fc]">
+    <section className="py-20 bg-brand-rose">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-black mb-16">
-          Our Locations
-        </h2>
+        
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-bold tracking-widest uppercase mb-4">
+            Visit Us
+          </div>
+          <h2 className="text-4xl md:text-5xl font-serif text-brand-text mb-6">
+            Our Locations
+          </h2>
+          <div className="flex justify-center items-center">
+             <div className="h-px w-12 bg-brand-primary/30"></div>
+             <div className="w-2 h-2 rounded-full bg-brand-primary mx-3"></div>
+             <div className="h-px w-12 bg-brand-primary/30"></div>
+          </div>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {locations.map((loc, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-sm p-8 border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow">
-              <h3 className="text-[17px] tracking-wide text-gray-800 uppercase mb-4 font-semibold">
+            <div key={idx} className="bg-white rounded-2xl shadow-sm p-8 border border-brand-primary/10 flex flex-col h-full hover:shadow-xl hover:border-brand-primary/30 transition-all">
+              <h3 className="text-xl font-bold text-brand-text mb-4">
                 {loc.city}
               </h3>
               
               <div className="flex items-start gap-3 mb-4 flex-grow">
-                <MapPin className="text-blue-600 shrink-0 mt-1" size={20} />
-                <p className="text-gray-500 text-[15px] leading-relaxed">
+                <MapPin className="text-brand-primary shrink-0 mt-1" size={20} />
+                <p className="text-brand-text/70 text-[15px] leading-relaxed">
                   {loc.address}
                 </p>
               </div>
               
-              <div className="flex flex-wrap items-center gap-4 text-[15px] pt-4 border-t border-gray-50 mt-auto">
+              <div className="flex flex-wrap items-center gap-4 text-[15px] pt-4 border-t border-brand-primary/10 mt-auto">
                 {loc.phones.map((phone, pIdx) => (
-                  <a key={pIdx} href={`tel:${phone.replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-blue-600 hover:underline font-medium">
+                  <a key={pIdx} href={`tel:${phone.replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-brand-primary hover:text-brand-primary-dark transition-colors font-medium">
                     <Phone size={16} />
                     <span>{phone}</span>
                   </a>
                 ))}
                 
-                <a href={`mailto:${loc.email}`} className="flex items-center gap-1.5 text-blue-600 hover:underline font-medium">
+                <a href={`mailto:${loc.email}`} className="flex items-center gap-1.5 text-brand-primary hover:text-brand-primary-dark transition-colors font-medium">
                   <Mail size={16} />
                   <span>{loc.email}</span>
                 </a>
