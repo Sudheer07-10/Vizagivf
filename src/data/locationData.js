@@ -57,17 +57,7 @@ export const locationsData = {
     phone: "+91 87123 36290",
     phones: ["+918712336290", "+919515605006"],
     email: "vizagivf@gmail.com",
-    doctors: [
-      {
-        id: 'vizag-1',
-        name: "Dr. Vizag Placeholder",
-        role: "Location Specialist",
-        credentials: "MBBS, MS",
-        experience: "Consultant",
-        image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png",
-        location: "Visakhapatnam"
-      }
-    ]
+    doctors: []
   },
   '/vizianagaram': {
     id: 'vizianagaram',
