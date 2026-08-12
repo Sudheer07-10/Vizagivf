@@ -5,27 +5,28 @@ import { getCurrentLocation } from '../data/locationData';
 
 const DOMAIN = 'https://vizagivf.medcytech.com';
 
-const SEO = ({ 
-  title, 
-  description, 
-  image = '/og-image.png', 
+const SEO = ({
+  title,
+  description,
+  image = '/og-image.png',
   type = 'website',
   structuredData = null
 }) => {
   const location = useLocation();
   const currentLocation = getCurrentLocation(location.pathname);
   const path = location.pathname;
-  
+
   // Base details
   const siteName = 'Vizag IVF Centre';
   let defaultTitle = `${siteName} - Comprehensive Fertility Care`;
-  
+
   // Location specific keyword logic
   let locKeywords = [];
   let locDescription = '';
-  
+
   if (currentLocation.id === 'srikakulam') {
     locKeywords = [
+      'Vizag IVF',
       'affordable IVF services Srikakulam',
       'IVF treatment in Srikakulam',
       'personalized fertility care Srikakulam',
@@ -36,6 +37,7 @@ const SEO = ({
     locDescription = 'Providing affordable IVF services, personalized fertility care, and the best IVF treatment in Srikakulam and near Bahadurlapeta.';
   } else if (currentLocation.id === 'visakhapatnam') {
     locKeywords = [
+      'Vizag IVF',
       'IVF success stories Nehru Nagar',
       'best IVF clinic in Visakhapatnam',
       'personalized IVF services Visakhapatnam',
@@ -45,13 +47,14 @@ const SEO = ({
     locDescription = 'Best IVF clinic in Visakhapatnam offering personalized IVF services, compassionate fertility care, and affordable treatments in Nehru Nagar.';
   } else if (currentLocation.id === 'vizianagaram') {
     locKeywords = [
+      'Vizag IVF',
       'IVF treatment in Vizianagaram',
       'best fertility clinic in Vizianagaram',
       'affordable IVF services Vizianagaram'
     ];
     locDescription = 'Top IVF treatment and personalized fertility care at Vizag IVF Centre in Vizianagaram.';
   }
-  
+
   const finalTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const finalDescription = description || locDescription || 'Vizag IVF Centre offers compassionate and advanced fertility treatments to help you build your family.';
   const finalKeywords = locKeywords.join(', ');
@@ -81,7 +84,7 @@ const SEO = ({
       <title>{finalTitle}</title>
       <meta name="description" content={finalDescription} />
       {finalKeywords && <meta name="keywords" content={finalKeywords} />}
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
 
