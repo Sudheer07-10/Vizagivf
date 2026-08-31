@@ -335,5 +335,85 @@
       "Vitrification can be defined as a physical process by which a highly concentrated solution of cryoprotectant solidifies into a glassy vitrified state from the liquid phase by an extreme elevation in the viscosity while cooling at a low temperature. The solid which is called glass retains the normal molecular and ionic distribution of the liquid state and can be considered to be an extremely viscous supercooled liquid4.",
       "About 80% of pregnancies due to IUI occur within the first three IUI cycles, post which the success rate lowers. We generally recommend a maximum of three IUI cycles, but this depends upon the age of the patient and the cause and duration of infertility."
     ]
+  },
+  {
+    "id": "urinary-leakage",
+    "title": "Urinary Leakage Issues",
+    "image": "/images/treatments/surgery_room.png",
+    "content": [
+      "Urinary leakage, or incontinence, is a common issue that can significantly impact a woman's quality of life. At Vizag IVF Centre, we offer advanced diagnostic and treatment options for various types of urinary incontinence.",
+      "Treatment may include lifestyle modifications, pelvic floor exercises, medical management, or minimally invasive surgical procedures depending on the severity and cause of the condition.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "pcod-pcos",
+    "title": "PCOD / PCOS Issues",
+    "image": "/images/treatments/iui_consult.png",
+    "content": [
+      "Polycystic Ovarian Disease (PCOD) or Polycystic Ovary Syndrome (PCOS) is a common hormonal disorder affecting women of reproductive age. It can lead to irregular menstrual cycles, weight gain, excess hair growth, and fertility issues.",
+      "Our comprehensive approach involves lifestyle management, dietary guidance, and medical treatments to regulate hormones, restore ovulation, and improve overall health and fertility.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "fibroids",
+    "title": "Fibroid Issues",
+    "image": "/images/treatments/surgery_room.png",
+    "content": [
+      "Uterine fibroids are non-cancerous growths of the uterus that often appear during childbearing years. While many women with fibroids have no symptoms, others may experience heavy bleeding, pelvic pain, or reproductive issues.",
+      "We provide expert care for uterine fibroids, offering treatments ranging from medication to minimally invasive surgeries like hysteroscopic or laparoscopic myomectomy to preserve fertility and alleviate symptoms.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "tubal-blocks",
+    "title": "Tubal Blocks",
+    "image": "/images/treatments/surgery_room.png",
+    "content": [
+      "Blocked fallopian tubes are a common cause of female infertility, preventing the sperm and egg from meeting or the fertilized egg from reaching the uterus.",
+      "Diagnosis typically involves a hysterosalpingogram (HSG) or laparoscopy. Depending on the location and extent of the blockage, treatments such as laparoscopic surgery, tubal cannulation, or IVF may be recommended.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "embryo-freezing",
+    "title": "Embryo Freezing",
+    "image": "/images/treatments/cryo_storage.png",
+    "content": [
+      "Embryo freezing, or cryopreservation, allows individuals and couples to store viable embryos from an IVF cycle for future use. This provides the opportunity to attempt another pregnancy without undergoing the full ovarian stimulation process again.",
+      "Using advanced vitrification techniques, embryos are rapidly frozen and stored in liquid nitrogen, ensuring high survival rates upon thawing.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "endometriosis",
+    "title": "Endometriosis",
+    "image": "/images/treatments/surgery_room.png",
+    "content": [
+      "Endometriosis is a condition where tissue similar to the lining of the uterus grows outside the uterus, causing pain and often contributing to infertility.",
+      "Our specialized treatments focus on managing pain and improving fertility through medications or advanced laparoscopic surgeries to remove endometrial tissue and adhesions.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "recurrent-miscarriage",
+    "title": "Recurrent Miscarriage",
+    "image": "/images/treatments/iui_consult.png",
+    "content": [
+      "Recurrent pregnancy loss can be emotionally devastating. It requires a thorough evaluation to identify underlying causes, which may include genetic, structural, hormonal, or immunological factors.",
+      "Our team provides comprehensive testing and personalized treatment plans to address the identified issues and support you towards a successful, healthy pregnancy.",
+      "Connect with us Today"
+    ]
+  },
+  {
+    "id": "male-infertility",
+    "title": "Male Infertility Issues",
+    "image": "/images/treatments/iui_consult.png",
+    "content": [
+      "Male factor infertility accounts for a significant portion of infertility cases. It can be due to low sperm count, poor sperm motility, or abnormal sperm morphology.",
+      "We offer comprehensive evaluations and advanced treatments for male infertility, including lifestyle advice, medications, surgical sperm retrieval (TESA/TESE), and advanced techniques like ICSI and IMSI.",
+      "Connect with us Today"
+    ]
   }
 ]

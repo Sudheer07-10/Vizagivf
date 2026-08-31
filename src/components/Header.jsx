@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   let currentLocSuffix = '';
-  const knownLocations = ['/visakhapatnam', '/vizianagaram', '/srikakulam'];
+  const knownLocations = ['/visakhapatnam', '/vizianagaram', '/srikakulam', '/gajuwaka'];
   for (const loc of knownLocations) {
     if (location.pathname.endsWith(loc)) {
       currentLocSuffix = loc;
@@ -38,13 +38,13 @@ const Header = () => {
     <header className="w-full bg-brand-rose border-b border-brand-primary-light/20 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 md:h-24">
-          
+
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to={getPath("/")} className="flex items-center gap-2">
-              <img 
-                src="/wp-content/uploads/2023/05/vizagivf.png" 
-                alt="Vizag IVF Centre" 
+              <img
+                src="/images/logo.png"
+                alt="Vizag IVF Centre"
                 className="h-12 md:h-16 w-auto object-contain"
               />
             </Link>
@@ -61,7 +61,7 @@ const Header = () => {
             <div className="relative group flex items-center cursor-pointer text-brand-text hover:text-brand-primary transition-colors py-2">
               <span className="mr-1 font-medium">Services</span>
               <ChevronDown size={14} className="mt-0.5" />
-              
+
               {/* Dropdown Menu for Services */}
               <div className="absolute top-full left-0 w-56 bg-white border border-brand-primary-light/20 shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden translate-y-2 group-hover:translate-y-0">
                 <div className="py-2">
@@ -80,7 +80,7 @@ const Header = () => {
             <div className="relative group flex items-center cursor-pointer text-brand-text hover:text-brand-primary transition-colors py-2">
               <span className="mr-1 font-medium">Patient Resources</span>
               <ChevronDown size={14} className="mt-0.5" />
-              
+
               {/* Dropdown Menu for Patient Resources */}
               <div className="absolute top-full left-0 w-48 bg-white border border-brand-primary-light/20 shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden translate-y-2 group-hover:translate-y-0">
                 <div className="py-2">
@@ -98,11 +98,12 @@ const Header = () => {
               <MapPin size={16} className="mr-1" />
               <span className="mr-1 font-medium">Locations</span>
               <ChevronDown size={14} className="mt-0.5" />
-              
+
               {/* Dropdown Menu for Locations */}
               <div className="absolute top-full left-0 w-48 bg-white border border-brand-primary-light/20 shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden translate-y-2 group-hover:translate-y-0">
                 <div className="py-2">
                   <Link to={getLocSwitcherPath("/visakhapatnam")} className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-rose hover:text-brand-primary">Visakhapatnam</Link>
+                  <Link to={getLocSwitcherPath("/gajuwaka")} className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-rose hover:text-brand-primary">Gajuwaka</Link>
                   <Link to={getLocSwitcherPath("/vizianagaram")} className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-rose hover:text-brand-primary">Vizianagaram</Link>
                   <Link to={getLocSwitcherPath("/srikakulam")} className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-rose hover:text-brand-primary">Srikakulam</Link>
                 </div>
@@ -112,8 +113,8 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center">
-            <Link 
-              to={getPath("/contact-us")} 
+            <Link
+              to={getPath("/contact-us")}
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-medium rounded-full shadow-sm text-white bg-brand-primary hover:bg-brand-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-primary transition-colors gap-2"
             >
               <Calendar size={18} />
@@ -143,10 +144,10 @@ const Header = () => {
             <Link to={getPath("/about-us")} onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-base font-medium text-brand-text hover:bg-brand-rose hover:text-brand-primary rounded-lg transition-colors">
               About Us
             </Link>
-            
+
             {/* Mobile Services Dropdown */}
             <div className="flex flex-col">
-              <button 
+              <button
                 onClick={() => toggleDropdown('services')}
                 className="flex justify-between items-center px-4 py-3 text-base font-medium text-brand-text hover:bg-brand-rose hover:text-brand-primary rounded-lg transition-colors"
               >
@@ -168,10 +169,10 @@ const Header = () => {
             <Link to={getPath("/our-doctors")} onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-base font-medium text-brand-text hover:bg-brand-rose hover:text-brand-primary rounded-lg transition-colors">
               Our Doctors
             </Link>
-            
+
             {/* Mobile Patient Resources Dropdown */}
             <div className="flex flex-col">
-              <button 
+              <button
                 onClick={() => toggleDropdown('resources')}
                 className="flex justify-between items-center px-4 py-3 text-base font-medium text-brand-text hover:bg-brand-rose hover:text-brand-primary rounded-lg transition-colors"
               >
@@ -194,7 +195,7 @@ const Header = () => {
 
             {/* Mobile Locations Dropdown */}
             <div className="flex flex-col">
-              <button 
+              <button
                 onClick={() => toggleDropdown('locations')}
                 className="flex justify-between items-center px-4 py-3 text-base font-medium text-brand-text hover:bg-brand-rose hover:text-brand-primary rounded-lg transition-colors"
               >
@@ -207,6 +208,7 @@ const Header = () => {
               {openDropdown === 'locations' && (
                 <div className="pl-6 pr-4 py-2 space-y-1 bg-brand-rose/30 rounded-lg mx-2 mb-1">
                   <Link to={getLocSwitcherPath("/visakhapatnam")} onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-brand-text hover:text-brand-primary">Visakhapatnam</Link>
+                  <Link to={getLocSwitcherPath("/gajuwaka")} onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-brand-text hover:text-brand-primary">Gajuwaka</Link>
                   <Link to={getLocSwitcherPath("/vizianagaram")} onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-brand-text hover:text-brand-primary">Vizianagaram</Link>
                   <Link to={getLocSwitcherPath("/srikakulam")} onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-sm text-brand-text hover:text-brand-primary">Srikakulam</Link>
                 </div>
@@ -215,8 +217,8 @@ const Header = () => {
 
             {/* Mobile CTA */}
             <div className="pt-4 px-2 pb-2">
-              <Link 
-                to={getPath("/contact-us")} 
+              <Link
+                to={getPath("/contact-us")}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-brand-primary hover:bg-brand-primary-dark transition-colors gap-2"
               >

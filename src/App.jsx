@@ -12,7 +12,7 @@ import TreatmentDetail from './pages/TreatmentDetail';
 import Gallery from './pages/Gallery';
 // Treatments and Surgeries hub pages can also point to TreatmentDetail or a custom hub if we build one
 // For now, let's map all the legacy routes to TreatmentDetail
-const locationPaths = ["", "/visakhapatnam", "/vizianagaram", "/srikakulam"];
+const locationPaths = ["", "/visakhapatnam", "/vizianagaram", "/srikakulam", "/gajuwaka"];
 
 function App() {
   return (
@@ -72,6 +72,14 @@ function App() {
                   <Route path={`/tesa-and-tese${loc}`} element={<TreatmentDetail />} />
                   <Route path={`/treatments${loc}`} element={<TreatmentDetail />} />
                   <Route path={`/vitrification${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/urinary-leakage${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/pcod-pcos${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/fibroids${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/tubal-blocks${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/embryo-freezing${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/endometriosis${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/recurrent-miscarriage${loc}`} element={<TreatmentDetail />} />
+                  <Route path={`/male-infertility${loc}`} element={<TreatmentDetail />} />
                 </React.Fragment>
               );
             })}

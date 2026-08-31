@@ -26,7 +26,7 @@ const SEO = ({
 
   if (currentLocation.id === 'srikakulam') {
     locKeywords = [
-      'Vizag IVF',
+      'Vizag IVF Center',
       'affordable IVF services Srikakulam',
       'IVF treatment in Srikakulam',
       'personalized fertility care Srikakulam',
@@ -37,7 +37,7 @@ const SEO = ({
     locDescription = 'Providing affordable IVF services, personalized fertility care, and the best IVF treatment in Srikakulam and near Bahadurlapeta.';
   } else if (currentLocation.id === 'visakhapatnam') {
     locKeywords = [
-      'Vizag IVF',
+      'Vizag IVF Center',
       'IVF success stories Nehru Nagar',
       'best IVF clinic in Visakhapatnam',
       'personalized IVF services Visakhapatnam',
@@ -78,6 +78,18 @@ const SEO = ({
     "description": finalDescription
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "alternateName": ["Vizag IVF", "Vizag IVF Center", "Vizag IVF Centre"],
+    "url": DOMAIN
+  };
+
+  const finalStructuredData = structuredData
+    ? (Array.isArray(structuredData) ? [...structuredData, websiteSchema] : [structuredData, websiteSchema])
+    : [defaultSchema, websiteSchema];
+
   return (
     <Helmet>
       {/* Basic HTML Meta Tags */}
@@ -105,7 +117,7 @@ const SEO = ({
 
       {/* Structured Data JSON-LD */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultSchema)}
+        {JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
   );

@@ -3,9 +3,21 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 const locations = [
   {
-    city: "VISAKHAPATNAM",
-    address: "29-2-4, 1st floor, Opp: Veterinary Hospital, Near Judge Court, Visakhapatnam -530022",
+    city: "VISAKHAPATNAM (2 CENTRES)",
+    address: "Door No. 29-2-42/213 (and 29-2-4), opposite the Veterinary Hospital near the Judge Court, Nehru Nagar, Ram Nagar, Visakhapatnam - 530020",
     phones: ["+918712336290", "+919515605006"],
+    email: "vizagivf@gmail.com"
+  },
+  {
+    city: "HYDERABAD",
+    address: "Branch details to be updated soon.",
+    phones: ["+918712336290"],
+    email: "vizagivf@gmail.com"
+  },
+  {
+    city: "VIJAYAWADA",
+    address: "Branch details to be updated soon.",
+    phones: ["+918712336290"],
     email: "vizagivf@gmail.com"
   },
   {
@@ -38,7 +50,7 @@ const LocationsSection = () => {
             Visit Us
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-brand-text mb-6">
-            Our Locations
+            Specialized Care across 7 locations
           </h2>
           <div className="flex justify-center items-center">
              <div className="h-px w-12 bg-brand-primary/30"></div>
@@ -47,30 +59,30 @@ const LocationsSection = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {locations.map((loc, idx) => (
-            <div key={idx} className="bg-white rounded-2xl shadow-sm p-8 border border-brand-primary/10 flex flex-col h-full hover:shadow-xl hover:border-brand-primary/30 transition-all">
-              <h3 className="text-xl font-bold text-brand-text mb-4">
+            <div key={idx} className="bg-white rounded-2xl shadow-sm p-6 border border-brand-primary/10 flex flex-col h-full hover:shadow-xl hover:border-brand-primary/30 transition-all">
+              <h3 className="text-lg font-bold text-brand-text mb-4">
                 {loc.city}
               </h3>
               
               <div className="flex items-start gap-3 mb-4 flex-grow">
-                <MapPin className="text-brand-primary shrink-0 mt-1" size={20} />
-                <p className="text-brand-text/70 text-[15px] leading-relaxed">
+                <MapPin className="text-brand-primary shrink-0 mt-1" size={18} />
+                <p className="text-brand-text/70 text-sm leading-relaxed">
                   {loc.address}
                 </p>
               </div>
               
-              <div className="flex flex-wrap items-center gap-4 text-[15px] pt-4 border-t border-brand-primary/10 mt-auto">
+              <div className="flex flex-wrap items-center gap-4 text-sm pt-4 border-t border-brand-primary/10 mt-auto">
                 {loc.phones.map((phone, pIdx) => (
                   <a key={pIdx} href={`tel:${phone.replace(/\s+/g, '')}`} className="flex items-center gap-1.5 text-brand-primary hover:text-brand-primary-dark transition-colors font-medium">
-                    <Phone size={16} />
+                    <Phone size={14} />
                     <span>{phone}</span>
                   </a>
                 ))}
                 
                 <a href={`mailto:${loc.email}`} className="flex items-center gap-1.5 text-brand-primary hover:text-brand-primary-dark transition-colors font-medium">
-                  <Mail size={16} />
+                  <Mail size={14} />
                   <span>{loc.email}</span>
                 </a>
               </div>

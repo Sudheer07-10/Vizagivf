@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
             Patient Stories
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-brand-text mb-6">
-            Real Women. Real Stories.
+            Real Families. Real Stories.
           </h2>
           <div className="flex justify-center items-center">
              <div className="h-px w-12 bg-brand-primary/30"></div>

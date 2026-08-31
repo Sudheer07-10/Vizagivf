@@ -56,11 +56,11 @@ const TreatmentDetail = () => {
             <img 
               src={treatment.image} 
               alt={treatment.title} 
-              className={`w-full h-full ${treatment.image.includes('vizagivf.png') ? 'object-contain p-8' : 'object-cover'}`}
+              className={`w-full h-full ${treatment.image.includes('logo.png') ? 'object-contain p-8' : 'object-cover'}`}
               onError={(e) => {
                 e.target.onerror = null;
-                e.target.src = "/wp-content/uploads/2023/06/happy-couple-enjoying-vizagivf-scaled-e1689949830314-1024x683.jpg"; // fallback image
-                e.target.className = "w-full h-full object-cover";
+                e.target.src = "/images/logo.png"; // fallback image
+                e.target.className = "w-full h-full object-contain p-8";
               }}
             />
           </div>

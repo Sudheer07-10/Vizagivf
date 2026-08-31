@@ -3,36 +3,27 @@ export const coreDoctors = [
     id: 1,
     name: "Dr. B. Sireesha Rani",
     role: "Infertility Specialist, Obstetrician & Gynaecologist",
-    credentials: "DNB (Ob & Gyn), Diploma in Reproductive Medicine (Germany)",
+    credentials: "Founder - Vizag IVF, Medcy IVF & Medcy Hospitals",
     experience: "Leading Specialist",
-    image: "/wp-content/uploads/2023/08/Dr-B-Sireesha-Rani.png",
+    image: "/images/doctors/Sireesha Rani.jpg",
     location: "Visakhapatnam"
   },
   {
     id: 2,
-    name: "Dr. Ramesh Baipalli",
-    role: "Surgical Gastroenterologist",
-    credentials: "M.S. (Gen. Surg), PDCC",
-    experience: "Senior Consultant",
-    image: "/wp-content/uploads/2023/08/Dr-Ramesh-Baipalli.png",
+    name: "Dr. Sudheshna Devi",
+    role: "Obstetrician & Gynecologist, Laparoscopic surgeon and cosmetic gynecologist",
+    credentials: "",
+    experience: "Consultant",
+    image: "/images/doctors/Sudheshna Devi.jpg",
     location: "Visakhapatnam"
   },
   {
     id: 3,
-    name: "Dr. Pavani Sathineedi",
-    role: "Obstetrician & Gynaecologist",
-    credentials: "MS OBG, FMAS, FRM",
+    name: "Dr. Mounica",
+    role: "Consultant Fertility Specialist",
+    credentials: "",
     experience: "Consultant",
-    image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png",
-    location: "Visakhapatnam"
-  },
-  {
-    id: 4,
-    name: "Dr. Sravya Naramchetti",
-    role: "Obstetrician & Gynaecologist",
-    credentials: "MBBS, MS OBGY",
-    experience: "Consultant",
-    image: "/wp-content/uploads/2023/08/Female-Doctor-Icon.png",
+    image: "/images/doctors/Mounica.jpg",
     location: "Visakhapatnam"
   }
 ];
@@ -41,7 +32,7 @@ export const defaultLocation = {
   id: 'visakhapatnam',
   name: "Main Branch (Visakhapatnam)",
   city: "Visakhapatnam",
-  address: "# 11-4-8/11/2, Flat No: 2, KGH Down Road, Maharanipeta, Visakhapatnam - 530002",
+  address: "Door No. 29-2-42/213 (and 29-2-4), opposite the Veterinary Hospital near the Judge Court, Nehru Nagar, Ram Nagar, Visakhapatnam - 530020",
   phone: "+91 87123 36290", // Kept from Footer default
   phones: ["+918712336290", "+919515605006"],
   email: "vizagivfcentre@gmail.com",
@@ -53,11 +44,31 @@ export const locationsData = {
     id: 'visakhapatnam',
     name: "Main Branch (Visakhapatnam)",
     city: "Visakhapatnam",
-    address: "29-2-4, 1st floor, Opp: Veterinary Hospital, Near Judge Court, Visakhapatnam -530022",
+    address: "Door No. 29-2-42/213 (and 29-2-4), opposite the Veterinary Hospital near the Judge Court, Nehru Nagar, Ram Nagar, Visakhapatnam - 530020",
     phone: "+91 87123 36290",
     phones: ["+918712336290", "+919515605006"],
     email: "vizagivf@gmail.com",
     doctors: []
+  },
+  '/gajuwaka': {
+    id: 'gajuwaka',
+    name: "Gajuwaka Branch",
+    city: "Gajuwaka",
+    address: "10-1-128/9, 80 ft Road, Near Paradise Hotel,Mehar Nagar, Visakhapatnam - 530026",
+    phone: "+91 809 600 8999",
+    phones: ["+918096008999"],
+    email: "vizagivf@gmail.com",
+    doctors: [
+      {
+        id: 'gjwk-1',
+        name: "Dr. Srujana Naidu",
+        role: "Obstetrician & Gynecologist, Consultant Fertility Specialist",
+        credentials: "",
+        experience: "Consultant",
+        image: "/images/doctors/Srujana Naiudu.jpg",
+        location: "Gajuwaka"
+      }
+    ]
   },
   '/vizianagaram': {
     id: 'vizianagaram',
@@ -70,11 +81,11 @@ export const locationsData = {
     doctors: [
       {
         id: 'vzm-1',
-        name: "Dr. Swarna Kumari Konchada",
-        role: "Fertility Specialist",
-        credentials: "MBBS, MS (Ob & Gyn), FRM, FMAS",
+        name: "Dr. Swarna Kumari",
+        role: "Obstetrician & Gynecologist, Consultant Fertility Specialist",
+        credentials: "",
         experience: "Consultant",
-        image: "/wp-content/uploads/2023/08/dr-vizianagaram.jpeg",
+        image: "/images/doctors/SwarnaKumari.jpg",
         location: "Vizianagaram"
       }
     ]
@@ -90,11 +101,11 @@ export const locationsData = {
     doctors: [
       {
         id: 'sklm-1',
-        name: "Dr. Vayilapalli Mitra Vinda",
-        role: "Consultant Obstetrician & Gynecologist, Infertility Specialist",
-        credentials: "MBBS, DGO(KGH), FRM",
+        name: "Dr. Mitra Vinda",
+        role: "Obstetrician & Gynecologist, Consultant Fertility Specialist",
+        credentials: "",
         experience: "Consultant",
-        image: "/wp-content/uploads/2023/08/dr-srikakulam.jpeg",
+        image: "/images/doctors/MitraVinda.jpg",
         location: "Srikakulam"
       }
     ]
