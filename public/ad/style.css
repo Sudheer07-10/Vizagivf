@@ -410,16 +410,63 @@ p { margin-bottom: 1rem; }
 @media (max-width: 992px) {
     .hero-inner { flex-direction: column; text-align: center; }
     .hero-details { justify-content: center; }
-    .hero-form-wrapper { width: 100%; max-width: 500px; }
-    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-form-wrapper { width: 100%; max-width: 500px; margin: 0 auto; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
     .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    /* Scale down logos for tablet */
+    .main-logo { transform: scale(2.5); margin-left: 20px; }
+    .medcy-logo { transform: scale(1.3); margin-left: 90px; }
+    
+    .hero-heading { font-size: 2.8rem; }
+    .datetime-banner { padding: 15px 20px; font-size: 1.1rem; gap: 20px; }
 }
 
 @media (max-width: 768px) {
-    .hero-heading { font-size: 2.2rem; }
+    .header-inner { flex-direction: column; gap: 15px; align-items: center; padding: 10px 0; }
+    
+    .logos { 
+        margin: 0; 
+        gap: 15px; 
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Remove transforms and use actual height for mobile */
+    .main-logo { transform: none; margin-left: 0; height: 50px; }
+    .medcy-logo { transform: none; margin-left: 0; height: 50px; }
+    
+    .hero-heading { font-size: 2.2rem; margin-bottom: 20px; line-height: 1.3; word-wrap: break-word; }
+    
+    /* Stack date and time on mobile */
+    .datetime-banner { 
+        display: flex;
+        flex-direction: column; 
+        gap: 10px; 
+        width: 100%; 
+        border-width: 1px;
+        padding: 15px 10px;
+        font-size: 1.1rem;
+    }
+    
+    /* Fix curve overlapping the image too much on small screens */
+    .curve-divider { margin-top: -30px; }
+    
     .steps-grid { grid-template-columns: 1fr; }
     .trust-grid { grid-template-columns: 1fr; }
     
+    /* Reduce padding on mobile */
+    .ad-content-section { padding: 20px 15px; }
+    .form-section { padding: 40px 15px; }
+    .trust-section { padding: 40px 15px; }
+    .ack-section { padding: 50px 15px; }
+    .steps-section { padding: 20px 15px 40px; }
+    
+    .ack-section h2 { font-size: 2rem; }
+    
     .sticky-cta { display: block; } /* Show on mobile */
     body { padding-bottom: 70px; } /* Space for sticky CTA */
+    
+    .footer-contact { flex-direction: column; gap: 15px; text-align: center; }
+    .contact-item { justify-content: center; font-size: 0.95rem; }
 }

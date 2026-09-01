@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // We assume it succeeded if the network request completed.
                 leadForm.style.display = 'none';
                 formSuccessMsg.classList.remove('hidden');
+                
+                // Show an explicit popup message on the screen
+                alert("Thank you! Your registration is successful. We will contact you soon.");
             })
             .catch(error => {
                 console.error('Error!', error.message);
