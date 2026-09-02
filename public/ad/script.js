@@ -70,6 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyBpgGGiiHAx6uICK1VhViiQomaFGmy7VtgIPAwJa4jgOQksbb5XryJJaJMXto8574AVA/exec';
 
         console.log('Tracking Event: Form Submitted', data);
+        if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+                'event_category': 'ad_campaign',
+                'event_label': 'free_medical_camp_registration',
+                'value': 1
+            });
+        }
 
         fetch(SCRIPT_URL, {
             method: 'POST',
@@ -142,6 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('click', (e) => {
             const trackName = el.getAttribute('data-track');
             console.log(`Tracking Event: Clicked [${trackName}]`);
+            if (typeof gtag === 'function') {
+                gtag('event', trackName, {
+                    'event_category': 'ad_campaign_interaction'
+                });
+            }
         });
     });
 });
