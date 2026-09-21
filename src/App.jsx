@@ -10,7 +10,6 @@ import OurDoctors from './pages/OurDoctors';
 import Home from './pages/Home';
 import TreatmentDetail from './pages/TreatmentDetail';
 import Gallery from './pages/Gallery';
-import CmsTest from './pages/CmsTest';
 // Treatments and Surgeries hub pages can also point to TreatmentDetail or a custom hub if we build one
 // For now, let's map all the legacy routes to TreatmentDetail
 const locationPaths = ["", "/visakhapatnam", "/vizianagaram", "/srikakulam", "/gajuwaka"];
@@ -23,7 +22,6 @@ function App() {
         <Header />
         <main className="flex-grow">
           <Routes>
-            <Route path="/cms-test" element={<CmsTest />} />
             {locationPaths.map((loc) => {
               // Ensure we don't end up with "//" for the root home path
               const homePath = loc === "" ? "/" : loc;
