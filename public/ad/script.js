@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(SCRIPT_URL, {
             method: 'POST',
             mode: 'no-cors', // Prevents CORS errors on the frontend
-            body: formData
+            body: new URLSearchParams(formData)
         })
             .then(() => {
                 // Because of 'no-cors', we can't read the exact success response.
